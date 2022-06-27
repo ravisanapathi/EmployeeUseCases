@@ -8,7 +8,7 @@ public class employeePartTimeWage{
 		int wagePerHour=20;
 		int workingHrsFullTime=8;
 		int workingHrsPartTime=4;
-		double empCheck=Math.floor(Math.random()*10)%2;
+		double empCheck=Math.floor(Math.random()*10)%3;
 		
 		
 		if(empCheck==ISPRESENTFullTime) {
