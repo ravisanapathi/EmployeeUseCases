@@ -2,17 +2,19 @@ package employeeMonthlyWage;
 //use case 5 : employee Monthly wage
 
 public class employeeMonthlyWage{
-	public static void main(String[] args) {
-		int ISPRESENTFullTime=1;
+	int ISPRESENTFullTime=1;
 		int ISPRESENTPartTime=2;
 		int wagePerHour=20;
 		int noOfWorkingdays=20;
 		int workingHrsFullTime=8;
 		int workingHrsPartTime=4;
-		double empCheck=Math.floor(Math.random()*10)%2;
+	public static void main(String[] args) {
+                // Variables
+		int empHrs=0; empWage=0; totalEmpWage=0;
+		//computation
 		
-	for (noOfWorkingdays=1; noOfWorkingdays<=20; noOfWorkingdays++)
-		
+		for (int day = 1; day <= noOfWorkingdays; day++) {
+		     int empCheck = (int) Math.floor(Math.random() * 10) % 3;
 		
 		if(empCheck==ISPRESENTFullTime) {
 			int empWage=wagePerHour*workingHrsFullTime;
@@ -29,5 +31,8 @@ public class employeeMonthlyWage{
 		else {
 			System.out.println("Employee is absent");
 		}
+			totalEmpWage += empWage;
+			System.out.println("Emp Wage: " + empWage);
 	}
+		       System.out.println("Total Emp Wage: " + totalEmpWage);
 }
